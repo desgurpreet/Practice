@@ -11,7 +11,7 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="text/babel">
+    <!-- <script type="text/babel">
       function Card(props) {
         const { title, des } = props;
         return (
@@ -28,6 +28,20 @@
             <Card title="card 1" des="card1 description" />
           </div>
         );
+      }
+      ReactDOM.render(<App />, document.querySelector("#app"));
+    </script> -->
+    <script type="text/babel">
+      function Card({ title, desc }) {
+        return (
+          <div className="card">
+            <h2>{title}</h2>
+            <p>{desc}</p>
+          </div>
+        );
+      }
+      function App() {
+        return <Card title="Gurpreet singh" desc="live in mohali" />;
       }
       ReactDOM.render(<App />, document.querySelector("#app"));
     </script>
