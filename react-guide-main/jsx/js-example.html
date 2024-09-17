@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla JS Button Example</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      // Again, manually DOM handle kar rahe hain
+      function createButton() {
+        const button = document.createElement("button");
+        button.innerText = "Click Me!";
+        button.addEventListener("click", () => alert("Button clicked!"));
+        return button;
+      }
+
+      document.getElementById("app").appendChild(createButton());
+    </script>
+  </body>
+</html>

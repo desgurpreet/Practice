@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      // JSX?
+      // Javascript and XML
+      // browser understand what langauges?
+      // html?
+      // css?
+      // js?
+      // JSX? => convert to browser understandable code
+      // babel compiler jo k convert krega JSX nu (html, css , js vich)
+      // so that browser understand kre
+
+      // React component function , that will return JSX
+      // Component Defined hered
+      function App() {
+        return (
+          // is it html? No it is JSX
+          <button className="" onClick={() => console.log("Hello")}>
+            Click Me!
+          </button>
+        );
+      }
+
+      const mainElement = document.querySelector("#app");
+
+      // component used by using component tag <App />
+      ReactDOM.render(<App />, mainElement);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      // Reusable card component banana possible hai, but tedious hai
+      function createCard(title, description) {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        const cardTitle = document.createElement("h2");
+        cardTitle.innerText = title; // Title dynamic
+        card.appendChild(cardTitle);
+
+        const cardDesc = document.createElement("p");
+        cardDesc.innerText = description; // Description dynamic
+        card.appendChild(cardDesc);
+
+        return card;
+      }
+
+      const app = document.querySelector("#app");
+      const firstCard = createCard("Card 1", "This is card 1 Descriptoin.");
+      const secondCard = createCard("Card 2", "This is card 2 Descriptoin.");
+
+      app.appendChild(firstCard);
+      app.appendChild(secondCard);
+    </script>
+  </body>
+</html>
