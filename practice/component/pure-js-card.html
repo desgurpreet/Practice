@@ -4,12 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
   </head>
   <body>
     <div id="app"></div>
-    <script>
+    <!-- <script>
       function createCard(title, description) {
         const card = document.createElement("div");
         card.classList.add("card");
@@ -30,6 +28,25 @@
 
       app.appendChild(firstCard);
       app.appendChild(secondCard);
+    </script> -->
+    <!-- Own practice -->
+    <script>
+      function Card(title, desc) {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const titleEl = document.createElement("h2");
+        titleEl.innerText = title;
+        card.appendChild(titleEl);
+
+        const descEl = document.createElement("p");
+        descEl.innerText = desc;
+        card.appendChild(descEl);
+        return card;
+      }
+      const mainEl = document.querySelector("#app");
+      const cardFirst = Card("Gurpreet singh", "live in ludhiana");
+      mainEl.appendChild(cardFirst);
     </script>
   </body>
 </html>
