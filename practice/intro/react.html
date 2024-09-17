@@ -10,13 +10,13 @@
   <body>
     <div id="app"></div>
     <script>
-      const buttonEl = React.createElement(
+      const btnEl = React.createElement(
         "button",
-        { onClick: () => console.log("Hello") },
-        "Click Me"
+        { onClick: () => console.log("hi") },
+        "Click"
       );
-      const appEl=document.querySelector("#app");
-      ReactDOM.render(buttonEl,appEl);
+      const appEl = document.querySelector("#app");
+      ReactDom.render(btnEl, appEl);
     </script>
   </body>
 </html>
